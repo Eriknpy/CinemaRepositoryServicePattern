@@ -1,0 +1,1 @@
+# CinemaRepositoryServicePattern
