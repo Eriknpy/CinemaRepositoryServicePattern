@@ -2,7 +2,7 @@
 {
     public class Ticket
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string MovieName { get; set; }
         public decimal SalePrice { get; set; }
         public decimal StudioCutPercentage { get; set; }
