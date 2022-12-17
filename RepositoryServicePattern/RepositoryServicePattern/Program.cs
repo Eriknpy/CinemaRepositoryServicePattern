@@ -1,3 +1,6 @@
+using RepositoryServicePattern.Repositories;
+using RepositoryServicePattern.Services;
+
 namespace RepositoryServicePattern
 {
     public class Program
@@ -8,6 +11,15 @@ namespace RepositoryServicePattern
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IFoodService, FoodService>();
+            builder.Services.AddScoped<IFoodRepository, FoodRepository>();
+            
+            builder.Services.AddScoped<ITicketService, TicketService>();
+            builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+
+            builder.Services.AddTransient<IFinancialsService, FinancialService>();
+            
 
             var app = builder.Build();
 
